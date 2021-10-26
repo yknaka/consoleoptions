@@ -76,4 +76,4 @@ When the key ends with particular word, the paired value will be parsed using fo
 | word  | key-value | key-value_list |
 | :---: | :---: | :---: |
 | __int | int(value) | [int(value1), int(value2), ...] |
-| __double | float(value) | [float(value1), float(value2), ...|
+| __double | float(value) | [float(value1), float(value2), ...] |
