@@ -1,4 +1,4 @@
-# get_console_options
+# getconsoleoptions
 
 ## get_dict
 Parse space separated argument.
