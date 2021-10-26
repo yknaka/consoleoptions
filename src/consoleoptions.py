@@ -18,12 +18,24 @@ def get_dict(args=sys.argv, dict={}):
     if eqindex == -1:
       dict[arg] = True
     else:
+      key = arg[:eqindex]
       value = __trim(arg[eqindex + 1:])
-      if value.endswith("__int"):
-        value = int(value)
-      elif value.endswith("__double"):
-        value = float(value)
-      dict[arg[:eqindex]] = value
+      if ',' in value:
+        value = value.split(',')
+        if key.endswith('__int'):
+          value = [int(v) for v in value]
+        elif key.endswith('__double'):
+          value = [float(v) for v in value]
+        elif key.endswith('__float'):
+          value = [float(v) for v in value]
+      else:
+        if key.endswith('__int'):
+          value = int(value)
+        elif key.endswith('__double'):
+          value = float(value)
+        elif key.endswith('__float'):
+          value = float(value)
+      dict[key] = value
   return dict
 
 

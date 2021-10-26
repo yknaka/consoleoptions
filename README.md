@@ -14,8 +14,8 @@ For Example,
 ```
 Then,
 ```
-   dictionary['optionfrag'] => True
-   'optionfrag' in dictionary => True
+  dictionary['optionfrag'] => True
+  'optionfrag' in dictionary => True
 ```
 
 ## key-value
@@ -38,10 +38,34 @@ or,
 
 Then,
 ```
-   dictionary['optionkey'] => value
-   'optionkey' in dictionary => True
+  dictionary['optionkey'] => value
+  'optionkey' in dictionary => True
 ```
 
+## key-value list
+- The option key-value are connected with '=' character and the value is comma separated list, they will set as a key-value_list on the dictionary.
+```
+  dictionary[key] = [value1,value2,value3,...]
+```
+For Example,
+```
+  % command.py optionkey='value1,value2,value3'
+```
+or,
+```
+  % command.py optionkey="value1,value2,value3"
+```
+or,
+```
+  % command.py optionkey=value1,value2,value3
+```
+
+Then,
+```
+  dictionary['optionkey'] => [value1,value2,value3]
+  'optionkey' in dictionary => True
+  type(dictionary['optionkey']) => <class 'list'>
+```
 # methods
 
 ## get_dict
@@ -49,7 +73,7 @@ Parse space separated argument.
 
 When the key ends with particular word, the paired value will be parsed using following rules automatically.
 
-| word  | parse as |
-| :---: | :---: |
-| __int | int(value) |
-| __double | float(value) |
+| word  | key-value | key-value_list |
+| :---: | :---: | :---: |
+| __int | int(value) | [int(value1), int(value2), ...] |
+| __double | float(value) | [float(value1), float(value2), ...|
