@@ -18,8 +18,10 @@ def get_dict(args=sys.argv, dict={}):
       dict[arg] = True
     else:
       value = __trim(arg[eqindex + 1:])
-      if value.endswith("_int"):
+      if value.endswith("__int"):
         value = int(value)
+      elif value.endswith("__double"):
+        value = float(value)
       dict[arg[:eqindex]] = value
   return dict
 
