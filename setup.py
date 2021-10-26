@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="get_console_option",
-    version="1.3.0",
+    version="1.4.0",
     author="Yuki NAKAMURA",
     author_email="naka_yk@live.jp",
     description="Create Console Option Dictionary",
@@ -25,6 +25,7 @@ setuptools.setup(
     python_requires=">=3.6",
     entry_points={
         'console_scripts': [
+            'get_console_options = get_console_options:main'
         ]
     },
 )
