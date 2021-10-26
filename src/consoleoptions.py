@@ -1,3 +1,4 @@
+# coding: UTF-8
 import sys
 # optionName="" もしくはoptionName=''もしくはoptionName=○○もしくはoptionNameで定義された入力オプションを検出して辞書化する
 
