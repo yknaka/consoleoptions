@@ -77,3 +77,16 @@ When the key ends with particular word, the paired value will be parsed using fo
 | :---: | :---: | :---: |
 | __int | int(value) | [int(value1), int(value2), ...] |
 | __double | float(value) | [float(value1), float(value2), ...] |
+
+
+Use 'dict' to set the default values.
+
+## load_from_file
+Parse options from file.
+
+Use 'dict' to set the default values.
+
+## load_from_json
+Parse options from json format.
+
+Use 'dict' to set the default values.

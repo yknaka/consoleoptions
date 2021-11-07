@@ -1,5 +1,6 @@
 # coding: UTF-8
 import sys
+import json
 # optionName="" もしくはoptionName=''もしくはoptionName=○○もしくはoptionNameで定義された入力オプションを検出して辞書化する
 
 
@@ -36,6 +37,17 @@ def get_dict(args=sys.argv, dict={}):
         elif key.endswith('__float'):
           value = float(value)
       dict[key] = value
+  return dict
+
+
+def load_from_file(file, dict={}):
+  json_open = open(file, 'r')
+  return load_from_json(json.load(json_open), dict)
+
+
+def load_from_json(json, dict={}):
+  for k, v in json.items():
+    dict[k] = v
   return dict
 
 
